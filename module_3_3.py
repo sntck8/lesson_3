@@ -2,7 +2,7 @@ def print_params(a = 1, b = 'строка', c = True):
     print(a, b, c)
 
 print_params(5, 'String')
-print_params( 7,None, False)
+print_params(7, None, False)
 print_params(666)
 print_params()
 
