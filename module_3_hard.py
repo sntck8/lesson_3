@@ -15,15 +15,15 @@ def calculate_structure_sum(data_structure):
     if isinstance(data, (list, tuple, set)):
       for item in data:
         recursion(item)
-    elif isinstance(data, dict):
+    if isinstance(data, dict):
       for value in data.values():
         recursion(value)
       for key in data.keys():
         recursion(key)
-    elif isinstance(data, (int, str)):
+    if isinstance(data, (int, str)):
       if isinstance(data, int):
         sum_nums += data
-      elif isinstance(data, str):
+      if isinstance(data, str):
         sum_strs += len(data)
 
   recursion(data_structure)
